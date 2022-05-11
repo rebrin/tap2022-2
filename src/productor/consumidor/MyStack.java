@@ -10,7 +10,7 @@ public class MyStack {
 
     public void push(char c){
       synchronized (this) {
-          //notify();
+          notify();
           data[cont] = c;
           cont++;
       }
@@ -18,7 +18,11 @@ public class MyStack {
 
     public synchronized char pop(){
         if(cont==0){
-
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
         cont--;
         return data[cont];
