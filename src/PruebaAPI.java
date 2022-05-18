@@ -11,11 +11,11 @@ public class PruebaAPI {
     public static void main(String[] args) throws Exception {
         ExecutorService servicio= Executors.newSingleThreadExecutor();
         servicio.execute(()->{
-            URL oracle = null;
+            URL API = null;
             try {
-               // oracle = new URL("https://disease.sh/v3/covid-19/all");
-                oracle = new URL("https://api.datos.gob.mx/v1/data-core");
-                URLConnection yc = oracle.openConnection();
+                API = new URL("https://disease.sh/v3/covid-19/all");
+                //oracle = new URL("https://api.datos.gob.mx/v1/data-core");
+                URLConnection yc = API.openConnection();
                 BufferedReader in = new BufferedReader(new InputStreamReader(
                         yc.getInputStream()));
                 String inputLine;
