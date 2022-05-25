@@ -10,9 +10,9 @@ public class TestBDSingleton {
 //            System.out.println("conexión establecida");
 
 
-        System.out.println(SingletonBDConn.getInstanceConn());
-        System.out.println(SingletonBDConn.getInstanceConn());
-        System.out.println(SingletonBDConn.getInstanceConn());
+//        System.out.println(SingletonBDConn.getInstanceConn());
+//        System.out.println(SingletonBDConn.getInstanceConn());
+//        System.out.println(SingletonBDConn.getInstanceConn());
 
 
     }
